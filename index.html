@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bakso Persatuan — Buku Menu digital</title>
+
+  <!-- Google Font (modern & clean) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#ef4444">
+</head>
+<body>
+  <!-- Toast notification -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🍜</span>
+        <h1>Bakso Kelompok 2</h1>
+      </div>
+      <p class="tagline">Pilih menu favoritmu, tambah ke keranjang, lalu pesan via WhatsApp!</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- MENU -->
+    <section class="menu-section" aria-labelledby="menu-heading">
+      <div class="section-head">
+        <h2 id="menu-heading">Menu </h2>
+        </div>
+
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <article class="menu-card">
+          <img src="Bakso urat.jpg" alt="Semangkuk Bakso Urat" loading="lazy">
+          <div class="menu-body">
+            <h3>Bakso Urat</h3>
+            <p>Bakso urat kenyal dan gurih.</p>
+            <div class="menu-meta">
+              <span class="price" data-price="10000">Rp10.000</span>
+              <button class="btn btn-add" data-name="Bakso Urat" data-price="10000" aria-label="Tambah Bakso Urat ke keranjang">
+                Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="menu-card">
+          <img src="Bakso telur.jpg" alt="Semangkuk Bakso Telur" loading="lazy">
+          <div class="menu-body">
+            <h3>Bakso Telur</h3>
+            <p>Bakso isi telur yang lezat.</p>
+            <div class="menu-meta">
+              <span class="price" data-price="10000">Rp10.000</span>
+              <button class="btn btn-add" data-name="Bakso Telur" data-price="10000" aria-label="Tambah Bakso Telur ke keranjang">
+                Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 (perbaikan nama) -->
+        <article class="menu-card">
+          <img src="Bakso boom.jpg" alt="Semangkuk Bakso Boom pedas" loading="lazy">
+          <div class="menu-body">
+            <h3>Bakso Boom</h3>
+            <p>Bakso berisi daging cincang pedas.</p>
+            <div class="menu-meta">
+              <span class="price" data-price="10000">Rp10.000</span>
+              <button class="btn btn-add" data-name="Bakso Boom" data-price="10000" aria-label="Tambah Bakso Boom ke keranjang">
+                Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="menu-card">
+          <img src="Es teh.jpg" alt="Segelas Es Teh" loading="lazy">
+          <div class="menu-body">
+            <h3>Es Teh</h3>
+            <p>Manis, segar, bikin adem.</p>
+            <div class="menu-meta">
+              <span class="price" data-price="5000">Rp5.000</span>
+              <button class="btn btn-add" data-name="Es Teh" data-price="5000" aria-label="Tambah Es Teh ke keranjang">
+                Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- KERANJANG -->
+    <aside class="cart-section" aria-labelledby="cart-heading">
+      <h2 id="cart-heading">🛒 Keranjang Pesanan</h2>
+
+      <ul id="cartList" class="cart-list" aria-live="polite"></ul>
+
+      <div class="cart-footer">
+        <div class="total">
+          <span>Total</span>
+          <strong id="totalHarga">Rp0</strong>
+        </div>
+
+        <div class="cart-actions">
+          <button class="btn btn-ghost" id="btnClear" type="button" aria-label="Kosongkan keranjang">Kosongkan</button>
+          <button class="btn btn-wa" id="btnWA" type="button" aria-label="Kirim pesanan ke WhatsApp">
+            Kirim ke WhatsApp
+          </button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bakso Kelompok 2 • Project Kokulikuler SMK YADIKA 12</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
